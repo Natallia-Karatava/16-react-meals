@@ -24,12 +24,7 @@ const MealsPage = () => {
   return (
     <div className="container mx-auto p-4">
       {meals.length > 0 ? (
-        meals.map((food) => (
-          <>
-            <p key={food.idMeal}>{food.strMeal}</p>{" "}
-            <CardItemComponent food={food} />
-          </>
-        ))
+        meals.map((food) => <CardItemComponent key={food.idMeal} food={food} />)
       ) : (
         <p>Kein Essen is da </p>
       )}
